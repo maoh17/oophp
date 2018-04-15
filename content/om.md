@@ -3,14 +3,13 @@
 Om
 =========================
 
-Denna webbplatsen är en del av kursen [XXX](https://dbwebb.se/kurser/XXX). Uppdatera så att länken går till kursens hemsida på dwebb.se.
+Denna webbplatsen är en del av kursen <a href="https://dbwebb.se/kurser/oophp-v4">oophp</a>.
 
-Några egna kloka ord om kursen?
+När jag är klar med denna kursen kommer jag att sätta igång bygget av en egen webbplats. Målet är att delar av webbplatsen ska byggas med objektorienterad PHP och MySQL. Så jag hoppas att jag tycker detsamma efter den här kursen.
 
-En fin och representativ bild för kursen, enligt ditt egna val.
 
-[FIGURE src=image/car.png?w=300 caption="En fin bil som demobild."]
+[FIGURE src=image/php_mysql.png?w=300 caption=""]
 
-Länka till [dbwebb kursrepot på GitHub](https://github.com/dbwebbse/XXX).
+[dbwebb kursrepot på GitHub](https://github.com/dbwebb-se/oophp).
 
-Länka till [ditt eget repo för me/redovisa på GitHub](https://github.com/XXX/XXX).
+[Mitt eget repo för me/redovisa på GitHub](https://github.com/maoh17/oophp).
