@@ -9,9 +9,8 @@ namespace Anax\View;
 // Show incoming variables and view helper functions
 //echo showEnvironment(get_defined_vars(), get_defined_functions());
 
+/* borttaget nedan: NAVBAR <?= __FILE__ ?> <br>*/
 ?>
-
-NAVBAR <?= __FILE__ ?> <br>
 
 <navbar>
     <a href="<?= url("") ?>">Hem</a> |
