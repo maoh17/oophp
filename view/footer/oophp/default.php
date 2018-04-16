@@ -9,7 +9,6 @@ namespace Anax\View;
 // Show incoming variables and view helper functions
 //echo showEnvironment(get_defined_vars(), get_defined_functions());
 
-?>
+/* borttaget nedan: FOOTER <?= __FILE__ ?> */
 
-FOOTER <?= __FILE__ ?>
-<?= showEnvironment(get_defined_vars(), get_defined_functions()) ?>
+?> <p>Copyright &copy by maoh17</p>
