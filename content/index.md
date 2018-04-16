@@ -6,7 +6,7 @@ Min me-sida i kursen oophp
 
 Detta är min me-sida i kursen Objektorienterade webbteknologier "<a href="https://dbwebb.se/kurser/oophp-v4">oophp</a>". Denna sidan innehåller en presentation av mig själv.
 
-[FIGURE src="image/moskkugaisi.jpg?w=500" caption="Jag på toppen av fjället Moskkugaisi, lite drygt en mil från Treriksröset i norra Lappland."]
+[FIGURE src="image/moskkugaisi.jpg?w=500" caption="Jag på toppen av fjället Moskkugaisi, några mil från Treriksröset i norra Lappland."]
 
 Min nuvarande resa började med att jag bestämde mig för att ta ett år ledigt från arbetslivet och bara göra saker ville göra och som jag aldrig gjort tidigare. Jag åkte skidor hela vintersäsongen 2016 i norska och svenska fjällen. Jag var hemma i Skåne på sommaren, men längtade tillbaka till fjällen. En fjällvandring hade jag aldrig gjort så jag började planera en sådan. Jag råkade läsa om någon som hade vandrat Gröna Bandet och tänkte att det måste jag prova. Så jag startade vid Treriksröset i augusti och började vandra söderut. I slutet av november, efter 152 mils vandring, kom jag fram till Grövelsjön i Dalarna.
 
