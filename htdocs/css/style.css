@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Junge);
+
 /**
  * General setup for layout.
  */
@@ -8,7 +11,7 @@ html {
 
 body {
     margin: 0;
-    background-color: #fff;
+    background-color: #f6f6f6;
     word-wrap: break-word;
 }
 
@@ -31,7 +34,7 @@ body {
 .outer-wrap-header {
     max-width: 100%;
     min-height: 2em;
-    background-color: #000;
+    background-color: #535353;
     color: #fff;
 }
 
@@ -60,6 +63,7 @@ body {
     background-color: #535353;
     color: #fff;
     padding: 0.5em 0;
+    font-family: 'Raleway';
 }
 
 .outer-wrap-navbar a {
@@ -78,14 +82,21 @@ body {
 .outer-wrap-main {
     min-height: 20em;
     margin-bottom: 2em;
+    background-color: #f6f6f6;
+}
+
+.wrap-main p {
+    font-family: 'Junge', serif;
 }
 
 .wrap-main h1 {
     border-bottom: 1px solid #999;
+    font-family: 'Raleway';
 }
 
 .wrap-main h2 {
     border-bottom: 1px solid #ccc;
+    font-family: 'Raleway';
 }
 
 
@@ -99,6 +110,7 @@ body {
     background-color: #424242;
     color: #fff;
     padding: 1em 0;
+    font-family: 'Raleway';
 }
 
 
