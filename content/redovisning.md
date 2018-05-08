@@ -24,8 +24,22 @@ Som vanligt i en ny kurs är det trögt att komma igång och få en överblick �
 Kmom02
 -------------------------
 
-Här är redovisningstexten
+**Hur gick det att överföra spelet “Gissa mitt nummer” in i din me-sida?**
+Det gick bra att överföra "Gissa mitt nummer" med GET och POST med hjälp av videoserien. Däremot fick jag än en gång problem med SESSION. Jag kände att jag hade inte tillräcklig koll på hur ramverket funkade även om jag gått igenom hela videoserien i detalj. Nu efteråt vet jag faktiskt inte vad jag körde fast på, mer än att jag la mer än 10 timmar på några rader kod som borde tagit 10 minuter. Jag fick prova mig fram, visste inte hur jag skulle felsöka och jag var inte långt ifrån att ge upp hela kursen i det här kursmomentet.
 
+**Berätta om hur du löste uppgiften med Tärningsspelet 100, hur du tänkte, planerade och utförde uppgiften samt hur du organiserade din kod?**
+Efter mina problem med sessioner i både kmom01 och kmom02 tänkte jag först att jag skulle lösa uppgiften utan sessioner, men ju längre jag kom desto mer insåg jag att det skulle nog bli bäst med sessioner i alla fall. Det var en knivig och omfattande uppgift (egentligen alldeles för stor för att vara redan i kmom02) och det gällde att ha koll på både ramverket och objektorienteringen. Men jag försökte gå systematiskt till väga. Börja att lägga in att kunna slå en tärning i ramverket. Sedan göra tärningarna grafiska. Därefter skapade jag en klass för en spelrunda och implementerade den. Till sist skapade jag klassen för hela spelet och kodade så att en spelare kunde spela till 100. När allt detta var klart var det inte jättesvårt att lägga till datorn som spelare. Jag är sjukt nöjd med att jag lyckades få ihop hela spelet utan hjälp, för det var verkligen ingen lätt uppgift som nybörjare på både ramverket och objektorienteringen.
+
+**Berätta om din syn på modellering likt UML jämfört med verktyg som phpDocumentor. Fördelar, nackdelar, användningsområde? Vad tycker du om konceptet make doc?**
+Jag hade faktiskt stor nytta av UML-modelleringen när jag löste uppgiften med tärningsspelet. Jag skapade först klassen i modellen med dess properties och metoder. Sedan kodade jag klassen. Naturligtvis fick jag gå tillbaka och modifiera modellen ibland när jag upptäckte att jag behövde fler metoder.
+
+phpDocumentor och make doc är ett smidigt sätt att generera dokumentation av den färdiga koden.
+
+**Hur känns det att skriva kod utanför och inuti ramverket, ser du fördelar och nackdelar med de olika sätten?**
+Jag ser absolut fördelar med att skriva kod i ett ramverk. Man får mycket kod på köpet. Däremot är det riktigt jobbigt att komma in i och jag tycker nog att kursen gick lite för fort fram med alldeles för lite exempelkod innan man fick försöka lösa uppgifterna själv. Några timmars mer övningar hade nog kunnat spara många dagar i slutändan.
+
+**Vilken är din TIL för detta kmom?**
+Att objektorienterad PHP funkar alldeles utmärkt för att skriva ett spelprogram. Klasser och objekt var ett naturligt sätt att implementera koden och jag tycker att jag har kommit in bra i tänket.
 
 
 Kmom03
