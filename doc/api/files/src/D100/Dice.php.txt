@@ -1,0 +1,61 @@
+<?php
+
+namespace maoh17\D100;
+
+/**
+ * Showing off a standard class with methods and properties.
+ */
+class Dice
+{
+    /**
+     * @var int $value     The current dice value.
+     */
+    private $value;
+    private $sides = 6;
+
+    /**
+     * Constructor to initiate the object with current game settings,
+     * if available. Randomize the current number.
+     *
+     * @param int $sides    Number of sides. Default = 6.
+     */
+    public function __construct(int $sides = 6)
+    {
+        $this->sides = $sides;
+    }
+
+
+    /**
+     * Randomize the dice value between 1 and 6.
+     *
+     * @return int
+     */
+    public function roll()
+    {
+        $this->value = rand(1, 6);
+        return $this->value;
+    }
+
+
+    /**
+     * Get last roll.
+     *
+     * @return int
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+
+    /**
+    * Get sides.
+    *
+    * @return int as number of sides.
+    */
+    public function getSides()
+    {
+        return $this->sides;
+    }
+}
+

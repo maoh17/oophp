@@ -80,8 +80,26 @@ Att jag har lärt mig skriva enkla enhetstester med verktyget PHPUnit.
 Kmom04
 -------------------------
 
-Här är redovisningstexten
+### Vilka är dina tankar och funderingar kring trait och interface?
+Trait är kodmoduler som kan återanvändas i flera klasser. Då PHP inte har stöd för multipelt arv kan trait användas istället. Precis som i vanligt arv så utökas funktionaliteten i en klass med nya metoder och variabler.
 
+Ett interface är ett slags kontrakt där en klass lovar att erbjuda en viss uppsättning metoder. Metoderna i interfacet kan finnas antingen i klassen direkt eller t.ex. i en trait som används av klassen.
+
+Jag ser fördelarna med att kunna återanvända kod med trait och interface, men samtidigt tycker jag att strukturen blir mer komplex med fler filer. Det var inte helt enkelt att få ett grepp om vilken fil som gör vad. Kanske beror det på att allt är nytt för mig just nu.
+
+### Hur gick det att skapa intelligensen och taktiken till tärningsspelet, hur gjorde du?
+Jag gjorde först en sannolikhetsberäkning av var gränsvärdet för när man bör stanna ligger. Inte helt säker på att formeln jag tog fram i ett kalkylark är hundra procent korrekt, men resultatet 16 verkar rimligt. Grundregeln är alltså att om poängen i spelrundan är 16 eller högre bör man stanna. Sedan la jag bara till några enkla specialfall.
+
+Om båda spelarna är nära slutet (har över en viss poäng) och det är stor risk att motspelaren vinner i nästa kast då fortsätter jag spela. Om motspelaren har över 70 poäng och jag ligger mer än 30 poäng efter då börjar jag chansa och ökar gränsvärdet. De här specialfallen är helt ovetenskapliga och bygger enbart på min egen intuition.
+
+### Några reflektioner från att integrera hårdare in i ramverkets klasser och struktur?
+Jag antar att det finns fördelar eftersom det nämndes i videon. Koden ser bra ut och det ska bland annat bli enklare att testa. Nackdelen är förstås om man skulle byta ramverk i framtiden. Då blir det mer kod att skriva om.
+
+### Berätta hur väl du lyckades med make test inuti ramverket och hur väl du lyckades att testa din kod med enhetstester och vilken kodtäckning du fick.
+Det gick ganska bra. Det blev mycket kod men det mesta var enkelt att skriva. Utmaningen var att validera tärningskasten som ju är slumpmässiga. När jag nått en kodtäckning på 96% kände jag mig nöjd.
+
+### Vilken är din TIL för detta kmom?
+Jag tror jag har greppat konceptet med trait och interface så pass mycket att jag vet ungefär när det kan användas. Det får bli ett specialverktyg i den objektorienterade verktygslådan att plocka fram när det behövs (men inte annars).
 
 
 Kmom05
