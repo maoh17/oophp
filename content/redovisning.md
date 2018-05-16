@@ -105,7 +105,23 @@ Jag tror jag har greppat konceptet med trait och interface så pass mycket att j
 Kmom05
 -------------------------
 
-Här är redovisningstexten
+### Några reflektioner kring koden i övningen för PHP PDO och MySQL?
+Jag tyckte koden verkade vara välstrukturerad och det var lätt att få en överblick. Jag såg vissa brister, som t.ex. att sökväg till MySQL fanns vy-filen reset.php och inte i config.php. Det var snyggt med klassen Database som en wrapper ovanpå PDO. Den blir ett API som samlar inte bara PDO-funktionerna utan också egna databasrelaterade metoder. Det gör att koden som använder databasobjektet blir mindre och enklare.
+
+Sedan reagerade jag på att index.php innehåller SELECT-satser. Det gör förstås att koden blir lätt att förstå i exemplet, men i ett riktigt projekt borde de väl inte ligga i routern. Med databaskursen i färskt minne så skulle jag nog lägga all SQL-kod i lagrade procedurer.
+
+### Hur gick det att överföra koden in i ramverket, stötte du på några utmaningar?
+Jag trodde faktiskt att det skulle vara lättare än det var i praktiken. Videoserien var utförlig och Mikael är som vanligt väldigt pedagogisk och bra. Största svårigheten var när jag skulle överföra navbaren till ramverket. Nu efteråt ser det inte så komplicerat ut, men jag tyckte det var svårt med felsökningen och trodde att felet låg i routern, när det var vyerna som var problemet. Jag hade också lite problem med sökvägen till bilderna och här tyckte jag att Anax betedde sig jättekonstigt och skapade helt oförklarliga länkar.
+
+### Berätta om din slutprodukt för filmdatabasen, gjorde du endast basfunktionaliteten eller lade du till extra features och hur tänkte du till kring användarvänligheten och din kodstruktur?
+Jag hade tänkt att göra extrauppgifterna. Det hade varit både kul och nyttigt, men jag har satt upp ett tidsschema för att hinna ifatt det jag ligger efter i kursen. Nu tog navigeringen så lång tid att felsöka så jag fick tyvärr hoppa över extrauppgifterna.
+
+Jag tycker det blev ganska användarvänligt. Det går att lägga till, ta bort och editera på samma ställe och det blir inga onödiga steg för användaren.
+
+Kodstrukturen funkar bra för en inlämningsuppgift, men det hade gått att göra koden mer objektorienterad så att route-filen blir mindre. Jag tyckte det var bra att ha databaskoden i routern för att få en överblick över koden och lära sig hur allt hänger ihop
+
+### Vilken är din TIL för detta kmom?
+Att det är ganska svårt att få till navigeringen i ett ramverk, men när det är på plats så flyter kodandet på.
 
 
 
