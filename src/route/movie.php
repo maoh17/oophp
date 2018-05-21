@@ -170,5 +170,4 @@ $app->router->any(['GET', 'POST'], 'movie/crud-movie', function () use ($app) {
     $data["resultset"] = $res;
     $app->view->add('movie/crud-movie', $data);
     $app->page->render($data);
-
 });
