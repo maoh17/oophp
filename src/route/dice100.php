@@ -14,8 +14,8 @@ $app->router->any(["GET", "POST"], "dice100/game", function () use ($app) {
     ];
 
     // Start the session
-    session_name("maoh17");
     session_destroy();
+    session_name("maoh17");
     session_start();
 
     // Start up the game if not already started
