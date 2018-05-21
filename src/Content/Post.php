@@ -27,7 +27,11 @@ class Post extends Content
 
     public function getNextBlogpostPath()
     {
-        $sql = "SELECT SUBSTRING(path, 10, (SELECT length(path) - 9 AS length FROM  content WHERE type ='post' ORDER BY created DESC LIMIT 1)) + 1 AS number FROM content WHERE type ='post' ORDER BY created DESC LIMIT 1;";
+        $sql = "SELECT SUBSTRING(path, 10, (
+            SELECT length(path) - 9 AS length FROM  content
+            WHERE type ='post'
+            ORDER BY created DESC LIMIT 1)) + 1 AS number
+            FROM content WHERE type ='post' ORDER BY created DESC LIMIT 1;";
         $res = $this->db->executeFetch($sql);
         $blogpostPath = "blogpost-" . strval($res->number);
 
