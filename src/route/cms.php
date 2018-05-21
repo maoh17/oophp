@@ -188,7 +188,15 @@ $app->router->post("cms/edit-page", function () use ($app) {
             $contentPath = null;
         }
 
-        $page->updatePage($contentTitle, $contentPath, $contentData, $contentType, $contentFilter, $contentPublish, $contentId);
+        $page->updatePage(
+            $contentTitle,
+            $contentPath,
+            $contentData,
+            $contentType,
+            $contentFilter,
+            $contentPublish,
+            $contentId
+        );
     } elseif ($app->request->getPost("doDelete")) {
         // Delete
         $contentId = $app->request->getPost("contentId");
@@ -262,7 +270,16 @@ $app->router->post("cms/edit-post", function () use ($app) {
 
         //$contentSlug = $post->getSlug($contentTitle);
 
-        $post->updatePost($contentTitle, $contentPath, $contentSlug, $contentData, $contentType, $contentFilter, $contentPublish, $contentId);
+        $post->updatePost(
+            $contentTitle,
+            $contentPath,
+            $contentSlug,
+            $contentData,
+            $contentType,
+            $contentFilter,
+            $contentPublish,
+            $contentId
+        );
     } elseif ($app->request->getPost("doDelete")) {
         // Delete
         $contentId = $app->request->getPost("contentId");
