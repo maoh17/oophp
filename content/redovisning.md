@@ -124,11 +124,28 @@ Kodstrukturen funkar bra för en inlämningsuppgift, men det hade gått att gör
 Att det är ganska svårt att få till navigeringen i ett ramverk, men när det är på plats så flyter kodandet på.
 
 
-
 Kmom06
 -------------------------
 
-Här är redovisningstexten
+### Hur gick det att jobba med klassen för filtrering och formatting av texten?
+I förra kursmomentet hade stora problem att få till den grundläggande navigeringen när jag flyttade koden in i ramverket, så den här gången valde jag att börja med att få navigeringen på plats. Jag byggde en enkel testsida med route/view inuti ramverket så att jag fick en grund där jag kunde placera koden efterhand. Jag skapade filterklassen med tomma funktioner och lät den skriva ut en dummy-text via routern och vyn. Sedan gick det bra att lägga in koden för filtreringen när jag väl hade strukturen på plats.
+
+### Berätta om din klasstruktur och kodstruktur för din lösning av webbsidor med innehåll i databasen.
+Jag valde att utföra uppgiften i några delsteg för att jag skulle känna att jag hade kontroll över vad jag höll på med i ramverket. Då jag inte hade använt några klasser i uppgiften med filmdatabasen i kmom05 bestämde jag mig för att först få alla routes på plats utan att använda några klasser, förutom klassen TextFilter som ju redan fanns klar. Jag delade upp både applikationen och koden i dels en content-del där jag visar webbsidor och bloggposter och dels en cms-del där jag skapar, redigerar och tar bort innehåll. Den uppdelningen funkade bra tycker jag.
+
+Jag valde att ha ganska många routes som hade specifika uppgifter istället för att låta ett färre antal göra många olika saker. Jag delade upp get och post. Delade också upp page och post i separata routes både i cms- och content-delen. Det viktiga för mig var att jag hade koll på vad varje route gjorde. Detta resulterade förstås i att mina routes-filer blev stora. Mycket av koden var duplicerad på flera ställen. När jag hade fått alla kraven att fungera var det dags att skapa en klasstruktur för att lägga över allt databasrelaterat i klasserna.  Jag ville inte att routern ska behöva känna till något om databasen.
+
+Jag fick problem när jag skulle få klasserna Page och Post att ärva från Content. Jag tyckte jag saknade bra exempel i kursmaterialet hur jag skulle lösa den biten. Till slut kom jag på att det var bara att deklarera variabeln i föräldraklassen som protected istället för private så funkade allt.
+
+Rent allmänt tycker jag att det har varit alldeles för lite fokus på objektorientering i kursen och för mycket ramverksstrul. Det finns tex inte ett enda exempel i kursmaterialet på hur en klass som använder databasen kan se ut. Nu lyckades jag fixa det ändå, men om jag har gjort det på ett bra sätt vet jag fortfarande inte.
+
+### Hur känner du rent allmänt för den koden du skrivit i din me/redovisa, vad är bra och mindre bra? Ser du potential till refactoring av din kod och/eller behov av stöd från ramverket?
+Jag är ganska nöjd med koden även om det fortfarande är ganska mycket kod i mina routes. Inga funktioner är särskilt stora och jag har en bra uppdelning av koden mellan view, route och klasserna med databasfunktioner. Att all SQL-kod är borta från mina routes känns riktigt bra.
+
+Ja, det finns potential för refactoring. Koden i min route är enkel att förstå, men inte särskilt dry. Det var en bra övning för mig att skriva koden så här, men för ett riktigt projekt skulle jag nog gå över koden en gång till.
+
+### Vilken är din TIL för detta kmom?
+Att jag lärde mig skriva objektorienterad kod för databasfunktioner.
 
 
 

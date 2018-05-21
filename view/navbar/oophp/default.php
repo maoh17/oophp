@@ -20,5 +20,8 @@ namespace Anax\View;
     <a href="<?= url("gissa") ?>">Gissa</a> |
     <a href="<?= url("tarningsspel100") ?>">Tärningsspel 100</a> |
     <a href="<?= url("movie/show-all") ?>">Filmdatabas</a> |
+    <a href="<?= url("textfilter-test") ?>">Textfilter</a> |
+    <a href="<?= url("content") ?>">Content</a> |
+    <a href="<?= url("cms/show-all") ?>">CMS</a> |
     <a href="<?= url("debug") ?>">Debug</a>
 </navbar>

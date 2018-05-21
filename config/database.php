@@ -17,6 +17,7 @@
  */
 if ($_SERVER["SERVER_NAME"] === "www.student.bth.se") {
     return [
+        "mysql"           => "/usr/bin/mysql",
         "dsn"             => "mysql:host=blu-ray.student.bth.se;dbname=maoh17;",
         "username"        => "maoh17",
         "password"        => "wzg9JSbvZwag",
@@ -36,6 +37,7 @@ if ($_SERVER["SERVER_NAME"] === "www.student.bth.se") {
 }
 
 return [
+    "mysql"           => "/Applications/XAMPP/bin/mysql",
     "dsn"             => "mysql:host=127.0.0.1;dbname=oophp;",
     "username"        => "user",
     "password"        => "pass",
@@ -47,7 +49,7 @@ return [
     "session_key"     => "Anax\Database",
 
     // True to be very verbose during development
-    "verbose"         => null,
+    "verbose"         => false,
 
     // True to be verbose on connection failed
     "debug_connect"   => false,
