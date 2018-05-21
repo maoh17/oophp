@@ -63,7 +63,7 @@ class Content
         $command = "$mysql -h{$host} -u{$login} -p{$password} $database < $setupfile 2>&1";
         $output = [];
         $status = null;
-        $res = exec($command, $output, $status);
+        exec($command, $output, $status);
         $output = "<p>The command was: <code>$command</code>.<br>The command exit status was $status."
             . "<br>The output from the command was:</p><pre>"
             . print_r($output, 1);
