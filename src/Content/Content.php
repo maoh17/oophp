@@ -22,7 +22,7 @@ class Content
 
     public function readAllContent()
     {
-        $sql = "SELECT * FROM content ORDER BY type, id;";
+        $sql = "SELECT * FROM content06 ORDER BY type, id;";
         $res = $this->db->executeFetchAll($sql);
 
         return $res;
@@ -31,7 +31,7 @@ class Content
 
     public function getContentById($id)
     {
-        $sql = "SELECT * FROM content WHERE id = ?;";
+        $sql = "SELECT * FROM content06 WHERE id = ?;";
         $res = $this->db->executeFetch($sql, [$id]);
 
         return $res;
@@ -40,7 +40,7 @@ class Content
 
     public function deleteContent($id)
     {
-        $sql = "UPDATE content SET deleted=NOW() WHERE id=?;";
+        $sql = "UPDATE content06 SET deleted=NOW() WHERE id=?;";
         $this->db->execute($sql, [$id]);
     }
 
