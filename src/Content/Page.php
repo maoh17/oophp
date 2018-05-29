@@ -20,14 +20,14 @@ class Page extends Content
 
     public function createPage($title)
     {
-        $sql = "INSERT INTO content (title, type) VALUES (?, ?);";
+        $sql = "INSERT INTO content06 (title, type) VALUES (?, ?);";
         $this->db->execute($sql, [$title, "page"]);
     }
 
 
     public function updatePage($title, $path, $data, $type, $filter, $publish, $id)
     {
-        $sql = "UPDATE content SET title=?, path=?, data=?, type=?, filter=?, published=? WHERE id = ?;";
+        $sql = "UPDATE content06 SET title=?, path=?, data=?, type=?, filter=?, published=? WHERE id = ?;";
         $this->db->execute($sql, [$title, $path, $data, $type, $filter, $publish, $id]);
     }
 
@@ -39,7 +39,7 @@ SELECT
 *,
 DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%dT%TZ') AS published_iso8601,
 DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%d') AS published
-FROM content
+FROM content06
 WHERE type=?
 AND path=?
 ;
