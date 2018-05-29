@@ -20,7 +20,7 @@ class Post extends Content
 
     public function createPost($contentTitle, $contentPath, $contentSlug)
     {
-        $sql = "INSERT INTO content (title, path, slug, type) VALUES (?, ?, ?, ?);";
+        $sql = "INSERT INTO content06 (title, path, slug, type) VALUES (?, ?, ?, ?);";
         $this->db->execute($sql, [$contentTitle, $contentPath, $contentSlug, "post"]);
     }
 
@@ -28,10 +28,10 @@ class Post extends Content
     public function getNextBlogpostPath()
     {
         $sql = "SELECT SUBSTRING(path, 10, (
-            SELECT length(path) - 9 AS length FROM  content
+            SELECT length(path) - 9 AS length FROM  content06
             WHERE type ='post'
             ORDER BY created DESC LIMIT 1)) + 1 AS number
-            FROM content WHERE type ='post' ORDER BY created DESC LIMIT 1;";
+            FROM content06 WHERE type ='post' ORDER BY created DESC LIMIT 1;";
         $res = $this->db->executeFetch($sql);
         $blogpostPath = "blogpost-" . strval($res->number);
 
@@ -48,7 +48,7 @@ class Post extends Content
         $currentContentSlug  = $slug;
         do {
             $i = $i + 1;
-            $sql = "SELECT COUNT(*) AS count FROM content WHERE slug = ?;";
+            $sql = "SELECT COUNT(*) AS count FROM content06 WHERE slug = ?;";
             $res = $this->db->executeFetch($sql, [$slug]);
             if ($res->count == 1) {
                 $slug = $currentContentSlug . "-" . $i;
@@ -64,7 +64,7 @@ class Post extends Content
 
     public function updatePost($title, $path, $slug, $data, $type, $filter, $publish, $id)
     {
-        $sql = "UPDATE content SET title=?, path=?, slug=?, data=?, type=?, filter=?, published=? WHERE id = ?;";
+        $sql = "UPDATE content06 SET title=?, path=?, slug=?, data=?, type=?, filter=?, published=? WHERE id = ?;";
         $this->db->execute($sql, [$title, $path, $slug, $data, $type, $filter, $publish, $id]);
     }
 
@@ -76,7 +76,7 @@ SELECT
 *,
 DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%dT%TZ') AS published_iso8601,
 DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%d') AS published
-FROM content
+FROM content06
 WHERE type=?
 AND slug=?
 ;
@@ -95,7 +95,7 @@ SELECT
 *,
 DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%dT%TZ') AS published_iso8601,
 DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%d') AS published
-FROM content
+FROM content06
 WHERE
     type=?
     AND (deleted IS NULL OR deleted > NOW())
